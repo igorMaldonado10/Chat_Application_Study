@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "209736724675",
+    "project_id": "study-chat-edccc",
+    "storage_bucket": "study-chat-edccc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209736724675:android:347bc01a88af0569ea7276",
+        "android_client_info": {
+          "package_name": "com.example.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209736724675-cl64jrk9oundqv949jflha57r1llsdnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4t435Fmyoh-q01MhUfLzAcE_t0nyMLqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209736724675-cl64jrk9oundqv949jflha57r1llsdnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
