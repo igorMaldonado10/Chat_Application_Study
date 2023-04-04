@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 
 class LoadinPage extends StatelessWidget {
-  const LoadinPage({Key? key}) : super(key: key);
+  const LoadinPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,11 +12,10 @@ class LoadinPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircularProgressIndicator(
+            const CircularProgressIndicator(
               backgroundColor: Colors.white,
-            )
-            ,
-            SizedBox(height:10),
+            ),
+            const SizedBox(height:10),
             Text('Carregando...',
             style: TextStyle(
               color: Theme.of(context).primaryTextTheme.headline1?.color

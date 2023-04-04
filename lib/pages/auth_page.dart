@@ -38,8 +38,8 @@ class _AuthPageState extends State<AuthPage> {
       setState(() => _isLoading = false);
     }
 
-    print('AuthPage...');
-    print(formData.email);
+    // print('AuthPage...');
+    // print(formData.email);
   }
 
   @override
@@ -52,10 +52,10 @@ class _AuthPageState extends State<AuthPage> {
             child: AuthForm(onSubmit: _handleSubmit),
           ),
         ),
-        if (_isLoading == true)
+        if (_isLoading)
           Container(
-            decoration: BoxDecoration(color: Color.fromRGBO(0, 0, 0, 0.5)),
-            child: Center(
+            decoration: const BoxDecoration(color: Color.fromRGBO(0, 0, 0, 0.5)),
+            child: const Center(
               child: CircularProgressIndicator(),
             ),
           )

@@ -3,7 +3,7 @@ import 'package:chat/core/services/chat/chat_service.dart';
 import 'package:flutter/material.dart';
 
 class NewMessage extends StatefulWidget {
-  const NewMessage({Key? key}) : super(key: key);
+  const NewMessage({super.key});
 
   @override
   State<NewMessage> createState() => _NewMessageState();
@@ -30,7 +30,7 @@ class _NewMessageState extends State<NewMessage> {
           child: TextField(
             controller: _messageController,
             onChanged: (msg) => setState(() => _message = msg),
-            decoration: InputDecoration(labelText: 'Enviar mensagem...'),
+            decoration: const InputDecoration(labelText: 'Enviar mensagem...'),
             onSubmitted: (_) {
               if (_message.trim().isNotEmpty) {
                 _sendMessage();
@@ -40,7 +40,7 @@ class _NewMessageState extends State<NewMessage> {
         ),
         IconButton(
             onPressed: _message.trim().isEmpty ? null : _sendMessage,
-            icon: Icon(Icons.send))
+            icon: const Icon(Icons.send))
       ],
     );
   }

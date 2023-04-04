@@ -1,4 +1,4 @@
-import 'package:chat/core/services/notification/push_notification_service.dart';
+import 'package:chat/core/services/notification/chat_notification_service.dart';
 import 'package:chat/pages/auth_or_app_page.dart';
 // import 'package:chat/pages/auth_page.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: AuthOrAppPage(),
+        home: const AuthOrAppPage(),
       ),
     );
   }

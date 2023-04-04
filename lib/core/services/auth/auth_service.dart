@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:chat/core/models/chat_user.dart';
 import 'package:chat/core/services/auth/auth_firebase_service.dart';
 
@@ -21,7 +20,7 @@ abstract class AuthService {
 
   Future<void> logout();
 
-// construtores factory: faz com que você consiga retorn uma subclasse, por exemplo da classe que você está chamando o construtor sem que ninguém saiba. Uma forma muito boa de retornar as implementações e não a interfáce, já que no caso, está é uma classe abstrata, ela apresenta apenas a interfáce, de como seria um serviço de authentication, sendo que por ser abstract ela não pode ser criada instância
+// construtores factory: faz com que você consiga return uma subclasse, por exemplo da classe que você está chamando o construtor sem que ninguém saiba. Uma forma muito boa de retornar as implementações e não a interfáce, já que no caso, está é uma classe abstrata, ela apresenta apenas a interfáce, de como seria um serviço de authentication, sendo que por ser abstract ela não pode ser criada instância
   factory AuthService() {
     // return AuthMockService();
     return AuthFirebaseService();

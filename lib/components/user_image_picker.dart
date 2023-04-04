@@ -2,22 +2,20 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-class UserImagePickerg extends StatefulWidget {
+class UserImagePicker extends StatefulWidget {
   final void Function(File image) onImagePick;
 
-  const UserImagePickerg({Key? key, required this.onImagePick})
-      : super(key: key);
+  const UserImagePicker({super.key, required this.onImagePick});
 
   @override
-  State<UserImagePickerg> createState() => _UserImagePickergState();
+  State<UserImagePicker> createState() => _UserImagePickerState();
 }
 
-class _UserImagePickergState extends State<UserImagePickerg> {
+class _UserImagePickerState extends State<UserImagePicker> {
   File? _image;
 
   Future<void> _pickImage() async {
     final picker = ImagePicker();
-
     final pickedImage = await picker.pickImage(
         source: ImageSource.gallery, 
         imageQuality: 50, 
@@ -45,10 +43,10 @@ class _UserImagePickergState extends State<UserImagePickerg> {
             onPressed: _pickImage,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(
                   Icons.image,
-                  color: Theme.of(context).primaryColor,
+                  // color: Theme.of(context).primaryColor,
                 ),
                 SizedBox(
                   width: 10,

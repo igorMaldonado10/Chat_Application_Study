@@ -51,7 +51,7 @@ class _AuthFormState extends State<AuthForm> {
             child: Column(
               children: [
                 if (_formData.isSignUp)
-                  UserImagePickerg(
+                  UserImagePicker(
                     onImagePick: _handleImagePick,
                   ),
                 if (_formData.isSignUp)

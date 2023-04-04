@@ -7,7 +7,7 @@ import '../core/models/chat_user.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 class AuthOrAppPage extends StatefulWidget {
-  const AuthOrAppPage({Key? key}) : super(key: key);
+  const AuthOrAppPage({super.key});
 
   @override
   State<AuthOrAppPage> createState() => _AuthOrAppPageState();
@@ -24,15 +24,15 @@ class _AuthOrAppPageState extends State<AuthOrAppPage> {
       future: init(context),
       builder: (context, snapshot) {
          if (snapshot.connectionState == ConnectionState.waiting) {
-              return LoadinPage();
+              return const LoadinPage();
          } else {
             return StreamBuilder<ChatUser?>(
           stream: AuthService().userChanges,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return LoadinPage();
+              return const LoadinPage();
             } else {
-              return snapshot.hasData ? ChatPage() : AuthPage();
+              return snapshot.hasData ? const ChatPage() : const AuthPage();
             }
           },
         );
